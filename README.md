@@ -1,6 +1,6 @@
 # Restaurant-Ordering-System
 
-This is a simple ordering system for small restaurant called Rin Ramen where the waiter or waitress can use it to collect orders and generate bills. In this restaurant, the available menu is relatively simple, in which there are three types of main meals, two types of beverages and three types of side dishes. For each order, the customer can select one main meal among the three types, and either order or not order beverages and side dishes. Beverages and side dishes can be of any quantity. After an order is submitted successfully, a bill is generated with necessary information such as table number, date, time, item names, prices, quantities and calculated payment amount. 
+This is a simple Java ordering system for restaurant called Rin Ramen where the waiter or waitress can use it to collect orders and generate bills. In this restaurant, the available menu is relatively simple, in which there are three types of main meals, two types of beverages and three types of side dishes. For each order, the customer can select one main meal among the three types, and either order or not order beverages and side dishes. Beverages and side dishes can be of any quantity. After an order is submitted successfully, a bill is generated with necessary information such as table number, date, time, item names, prices, quantities and calculated payment amount. 
 
 **JavaFX** is used to create and deliver a desktop application. This program also implements the Decorator Design Pattern in designing how the order should be managed.
 
