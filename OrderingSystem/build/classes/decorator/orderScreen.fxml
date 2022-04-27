@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="848.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="27.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Table No.">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="tableNumBox" layoutX="105.0" layoutY="124.0" prefHeight="25.0" prefWidth="57.0" style="-fx-border-color: #000000; -fx-background-color: #FFFFFF;" />
+      <Text layoutX="32.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Main Meal">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="176.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="seafoodRamen" layoutX="26.0" layoutY="210.0" mnemonicParsing="false" onAction="#seafoodSelected" text="Seafood Ramen">
+         <toggleGroup>
+            <ToggleGroup fx:id="mealGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="beefRamen" layoutX="26.0" layoutY="245.0" mnemonicParsing="false" onAction="#beefSelected" text="Beef Ramen" toggleGroup="$mealGroup" />
+      <RadioButton fx:id="chickenKatsuRamen" layoutX="26.0" layoutY="278.0" mnemonicParsing="false" onAction="#chickenKatsuSelected" text="Chicken Katsu Ramen" toggleGroup="$mealGroup" />
+      <Text layoutX="36.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Beverage">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="greenTea" layoutX="26.0" layoutY="356.0" mnemonicParsing="false" onAction="#greenTeaChanged" text="Green Tea" />
+      <CheckBox fx:id="softDrink" layoutX="26.0" layoutY="390.0" mnemonicParsing="false" onAction="#softDrinkChanged" text="Soft Drink" />
+      <Text layoutX="36.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Side Dish">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="chashu" layoutX="27.0" layoutY="468.0" mnemonicParsing="false" onAction="#chashuChanged" text="Roasted Chashu" />
+      <CheckBox fx:id="gyoza" layoutX="28.0" layoutY="497.0" mnemonicParsing="false" onAction="#gyozaChanged" text="Japanese Gyoza" />
+      <CheckBox fx:id="salad" layoutX="28.0" layoutY="527.0" mnemonicParsing="false" onAction="#saladChanged" text="Salad" />
+      <ComboBox fx:id="greenTeaCombo" disable="true" layoutX="259.0" layoutY="352.0" prefHeight="25.0" prefWidth="118.0" promptText="Hot or Cold" style="-fx-border-color: #000000; -fx-background-color: #FFFFFF;" />
+      <ComboBox fx:id="softDrinkCombo" disable="true" layoutX="259.0" layoutY="386.0" prefHeight="25.0" prefWidth="118.0" promptText="Select drink" style="-fx-border-color: #000000; -fx-background-color: #FFFFFF;" />
+      <Button fx:id="orderBtn" layoutX="293.0" layoutY="501.0" mnemonicParsing="false" onAction="#submitOrderPressed" prefHeight="51.0" prefWidth="107.0" style="-fx-background-color: #FFA62F;" text="ORDER" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0" />
+         </effect>
+      </Button>
+      <AnchorPane layoutX="443.0" layoutY="118.0" prefHeight="437.0" prefWidth="377.0" style="-fx-background-color: #FFFFFF;">
+         <effect>
+            <DropShadow height="25.0" radius="12.0" width="25.0" />
+         </effect>
+         <children>
+            <Text layoutX="130.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rin Ramen">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="23.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="22.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time:">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="23.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Table -">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="25.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QTY">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="73.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Name">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="232.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="293.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="22.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="---------------------------------------------------------------------" />
+            <Text layoutX="22.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="---------------------------------------------------------------------" />
+            <Text layoutX="25.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Net Subtotal">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="item1" layoutX="73.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="item2" layoutX="73.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="item3" layoutX="73.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="item4" layoutX="73.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="item5" layoutX="73.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="item6" layoutX="73.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="22.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="---------------------------------------------------------------------" />
+            <Text layoutX="26.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sales Tax">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="26.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total to Pay">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="qty1" layoutX="35.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="22.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="---------------------------------------------------------------------" />
+            <Text fx:id="qty2" layoutX="35.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="qty3" layoutX="35.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="qty4" layoutX="35.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="qty5" layoutX="35.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="qty6" layoutX="35.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="price1" layoutX="231.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="price2" layoutX="232.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="price3" layoutX="232.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="price4" layoutX="232.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="price5" layoutX="232.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="price6" layoutX="232.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="amount1" layoutX="294.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="amount2" layoutX="294.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="amount3" layoutX="294.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="amount4" layoutX="294.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="amount5" layoutX="294.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="amount6" layoutX="294.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="netSubtotal" layoutX="296.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="salesTax" layoutX="296.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="totalToPay" layoutX="296.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="22.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="---------------------------------------------------------------------" />
+            <Text fx:id="date" layoutX="72.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="time" layoutX="72.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="tableNum" layoutX="78.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="-1.0" prefHeight="101.0" prefWidth="857.0" style="-fx-background-color: #CF742E;">
+         <children>
+            <Text fill="WHITE" layoutX="76.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Rin Ramen">
+               <font>
+                  <Font name="Poor Richard" size="39.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="462.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by Adeline Fong Li Ling (1191100708)">
+               <font>
+                  <Font name="SimSun" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Spinner fx:id="seafood_qty" disable="true" editable="true" layoutX="175.0" layoutY="206.0" prefHeight="25.0" prefWidth="61.0" />
+      <Spinner fx:id="beef_qty" disable="true" editable="true" layoutX="175.0" layoutY="241.0" prefHeight="25.0" prefWidth="61.0" />
+      <Spinner fx:id="chickenKatsu_qty" disable="true" editable="true" layoutX="175.0" layoutY="274.0" prefHeight="25.0" prefWidth="61.0" />
+      <Spinner fx:id="greenTea_qty" disable="true" editable="true" layoutX="175.0" layoutY="352.0" prefHeight="25.0" prefWidth="61.0" />
+      <Spinner fx:id="softDrink_qty" disable="true" editable="true" layoutX="175.0" layoutY="386.0" prefHeight="25.0" prefWidth="61.0" />
+      <Spinner fx:id="chashu_qty" disable="true" editable="true" layoutX="175.0" layoutY="464.0" prefHeight="25.0" prefWidth="61.0" />
+      <Spinner fx:id="gyoza_qty" disable="true" editable="true" layoutX="175.0" layoutY="493.0" prefHeight="25.0" prefWidth="61.0" />
+      <Spinner fx:id="salad_qty" disable="true" editable="true" layoutX="175.0" layoutY="523.0" prefHeight="25.0" prefWidth="61.0" />
+      <Button fx:id="resetBtn" layoutX="578.0" layoutY="576.0" mnemonicParsing="false" onAction="#resetBtnPressed" prefHeight="41.0" prefWidth="107.0" style="-fx-background-color: #98602E;" text="RESET" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0" />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
